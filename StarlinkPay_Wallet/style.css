@@ -61,6 +61,27 @@ body {
     animation-delay: 1.5s;
 }
 
+#loadedImg {
+    animation: fadeInUp 1s ease-out forwards;
+    animation-delay: 0.3s;
+    transform: translateY(20px);
+    opacity: 0;
+}
+
+@keyframes fadeOutUp {
+    to {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+}
+
+@keyframes fadeInUp {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 #headerSection {
     width: 100%;
     margin-bottom: 5em;

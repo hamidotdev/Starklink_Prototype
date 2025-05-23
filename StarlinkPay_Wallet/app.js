@@ -4,5 +4,5 @@ window.addEventListener("load", () => {
     setTimeout(()=> {
         loaderContainer.style.display = 'none'
         mainContainer.style.display = 'flex'
-    }, 1000)
+    }, 2500)
 })
