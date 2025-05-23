@@ -1,17 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Confirm Wallet</title>
+  <meta charset="UTF-8">
+  <title>Confirm Wallet</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-[#0b1e39] text-white min-h-screen flex flex-col justify-center items-center px-6">
 
-    <div class="w-full max-w-md space-y-6">
-        <h1 class="text-2xl font-bold text-center">Confirm Your Phrase</h1>
+  <div class="w-full max-w-md space-y-6">
+    <h1 class="text-2xl font-bold text-center">Confirm Your Phrase</h1>
 
-        <p class="text-sm text-gray-300 text-center">Type the 12-word recovery phrase to confirm:</p>
-    </div>
-    
+    <p class="text-sm text-gray-300 text-center">Type the 12-word recovery phrase to confirm:</p>
+
+    <textarea id="confirmInput" rows="3"
+      class="w-full p-3 bg-gray-800 text-white rounded resize-none"
+      placeholder="Enter the 12-word phrase"></textarea>
+
+    <button id="confirmBtn" class="w-full bg-pink-600 hover:bg-pink-700 py-3 rounded text-lg">
+      Confirm Wallet
+    </button>
+
+    <p id="errorMsg" class="text-red-500 text-sm text-center hidden">Incorrect phrase. Please try again.</p>
+  </div>
+
+  <script>
+    const storedMnemonic = localStorage.getItem("mnemonic");
+
+    document.getElementById("confirmBtn").addEventListener("click", () => {
+      const userInput = document.getElementById("confirmInput").value.trim();
+
+      if (userInput === storedMnemonic) {
+        window.location.href = "dashboard.html";
+      } else {
+        document.getElementById("errorMsg").classList.remove("hidden");
+      }
+    });
+  </script>
 </body>
 </html>
