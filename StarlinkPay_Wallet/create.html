@@ -6,7 +6,40 @@
     <title>Create Wallet</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-[#031A42] text-white min-h-screen flex flex-col justify-center items-center px-6">
+
+    <div class="w-full max-w-md space-y-6">
+        <h1 class="text-2xl font-bold text-center">Create New Wallet</h1>
+
+        <button id="createWalletBtn" class="w-full bg-pink-600 hover:bg-pink-700 py-3 rounded text-lg">
+            Generate Wallet
+        </button>
+
+        <div id="mnemonicBox" class="hidden bg-gray-800 p-4 rounded">
+            <p class="text-sm text-gray-300 mb-2">Save you 12-word phrase</p>
+            <p id="mnemonicWords" class="text-green-400 break-words mb-4"></p>
+
+            <button id="continueBtn" class="w-full bg-blue-600 hover:bg-blue-700 py-2 rounded">
+                Continue
+            </button>
+        </div>
+    </div>
     
+    <script src="app.js"></script>
+    <script>
+        document.getElementById("createWalletBtn").addEventListener('click', () => {
+            const wallet = ethers.Wallet.createRandom();
+            localStorage.setItem('mnemonic', wallet.mnemonic.phrase)
+            localStorage.setItem('privateKey', wallet.privateKey);
+
+            document.getElementById("mnemonicWords").textContent = wallet.mnemonic.phrase
+            document.getElementById("mnemonicBox").classList.remove("hidden");
+        })
+
+        document.getElementById("continuueBtn").addEventListener("click", () => {
+            window.location.href - "confirm html"
+        })
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
 </body>
 </html>
