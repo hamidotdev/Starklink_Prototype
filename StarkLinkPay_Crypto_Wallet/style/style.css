@@ -1,0 +1,461 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    max-width: 450px;
+    width: 100%;
+    margin: 0 auto;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#container {
+    width: 100%;
+    max-width: 450px;
+    height: 100%;
+    background: #031A42;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 0;
+    margin: 0 auto;
+}
+
+#main-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25%;
+}
+
+.logoImg {
+    width: 177px;
+    height: 174px;
+}
+
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    background: #031A42;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeOutUp 1s ease-in-out forwards;
+    animation-delay: 1.5s;
+}
+
+#loadedImg {
+    animation: fadeInUp 1s ease-out forwards;
+    animation-delay: 0.3s;
+    transform: translateY(20px);
+    opacity: 0;
+}
+
+@keyframes fadeOutUp {
+    to {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+}
+
+@keyframes fadeInUp {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+#headerSection {
+    width: 100%;
+    margin-bottom: 5em;
+    display: grid;
+    place-items: center;
+    color: #fff;
+}
+
+#welcomeEl {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 50px;
+}
+
+#headerText {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+#footerSection {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    gap: 15px;
+}
+
+#footerSection button {
+    height: 54px;
+    border-radius: 10px;
+    color: #ffff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#createWallet {
+    border: none;
+    background: #F97471;
+}
+
+#importWallet {
+    background: transparent;
+    border: 2px solid #ffff;
+}
+
+/* Create Wallet Container */
+#createWalletContainer, #confirmWalletContainer, #importWalletContainer {
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    gap: 3rem;
+}
+
+.textHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+.textHeader span {
+    position: absolute;
+    left: 0;
+    color: #F97471;
+    font-weight: 400;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.textHeader h1 {
+    font-size: 32px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.seedPhrases {
+    display: grid;
+    grid-template-columns: 10% 42% 10% 38%;
+    width: 100%;
+    row-gap: 1.5rem;
+    grid-auto-rows: 40px;
+    color: #fff;
+    font-weight: 400;
+}
+
+.seedPhrases textarea {
+    border-radius: 0 5px 5px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 5px;
+    outline: none;
+    background-color: #2e5497;
+    resize: none;
+    white-space: nowrap;
+    color: #ffff;
+}
+
+.seedPhrases > textarea:nth-child(2), .seedPhrases > textarea:nth-child(6), .seedPhrases > textarea:nth-child(10), .seedPhrases > textarea:nth-child(14), .seedPhrases > textarea:nth-child(18), .seedPhrases > textarea:nth-child(22) {
+    margin-right: 15px;
+}
+
+.seedPhrases span {
+    background-color: gray;
+    border-radius: 5px 0 0 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contentLastChild {
+    width: 80%;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.contentLastChild p {
+    color: #F97471;
+    margin-bottom: 1rem;
+}
+
+#confirmWallet_lastChild p, #importWallet_lastChild p {
+    text-transform: uppercase;
+    color: #78F971;
+    font-size: 14px;
+}
+
+.contentLastChild button {
+    width: 100%;
+    border: none;
+    background-color: #F97471;
+    height: 54px;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Dashboard */
+#dashboardContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+#welcomeMessage {
+    width: 80%;
+    margin: 0 auto 5px auto;
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+}
+
+#userIdAndsettings {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(217, 217, 217, 0.13);
+    padding: 8px 12px 8px 8px;
+    color: rgba(255, 255, 255, 1);
+}
+
+#userIdAndsettings img {
+    cursor: pointer;
+}
+
+#userId {
+    display: flex;
+}
+
+#userNameIcon {
+    border-radius: 50%;
+    background-color: #F97471;
+    font-size: 32px;
+    color: #fff;
+    font-weight: 400;
+    width: 54px;
+    aspect-ratio: 1/1;
+    display: grid;
+    place-items: center;
+}
+
+#userName {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 5px;
+}
+
+#userName h3 {
+    font-weight: 400;
+    font-size: 16px;
+}
+
+#dashboardTitle {
+    width: 85%;
+    margin: 0 auto;
+}
+
+#dashboardTitle h2 {
+    font-size: 20px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+#dashboardTitle h1 {
+    font-size: 40px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 1);
+    width: 100%;
+}
+
+#dashboardBtns {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: space-between;
+    margin-block: 15px;
+}
+
+#dashboardBtns .imgContainer {
+    border-radius: 50%;
+    background-color: rgba(58, 66, 208, 0.23);
+    width: 62px;
+    aspect-ratio: 1/1;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+}
+
+#dashboardBtns h3 {
+    font-size: 12px;
+    color: #fff;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 5px;
+}
+
+#transactionActivities {
+    width: 95%;
+    margin: 0 auto;
+}
+
+#transactionActivities > h2 {
+    width: 95%;
+    margin: 0 auto;
+    font-size: 20px;
+    font-weight: 400;
+    color: #FFFFFF;
+}
+
+#transactionHistory {
+    background-color: #D9D9D90A;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-radius: 20px;
+    margin: 15px 0;
+}
+
+#transactionPayment {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+#listBtns {
+    border-radius: 50%;
+    height: 8px;
+    aspect-ratio: 1/1;
+    background-color: #64E85E;
+}
+
+#transactionInfo {
+    font-weight: 400;
+    color: #fff;
+}
+
+#transactionInfo h3 {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+#paymentDuration {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+#amount {
+    color: #64E85E;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+/* Crypto Asset Dashboard */
+#assetContainer {
+    width: 100%;
+}
+
+#backDirection {
+    width: 90%;
+    margin: 0 auto;
+    color: #F97471;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+#tokenContainer {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    margin: 30px auto;
+}
+
+#STRK_Token, #USDT_Token, #ETH_Token {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(217, 217, 217, 0.04);
+    padding: 10px 15px;
+    margin-block: 10px;
+    border-radius: 20px;
+    color: #ffff;
+}
+
+.tokenId {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.tokenId p {
+    width: 50px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+}
+
+#STRK_Icon{
+    background-color: rgba(249, 116, 113, 1);
+}
+
+#USDT_Icon {
+    background-color: rgba(108, 162, 226, 1);
+}
+
+#ETH_Icon {
+    background-color: rgba(108, 226, 143, 1);
+}
+
+.tickers {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.value {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+#receiveContent {
+    width: 90%;
+    margin: 0 auto;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+}
