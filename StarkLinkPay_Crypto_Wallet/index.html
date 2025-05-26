@@ -10,24 +10,24 @@
     <div id="container">
         <!-- Loading Screen -->
         <section id="loadingScreen">
-            <img src="./asset/logo.png" alt="logo" class="logoImg" id="loadedImg">
+            <img src="./asset/logo.png" alt="Loading Logo" class="logoImg" id="loadedImg">
         </section>
 
         <!-- Create or Import Wallet Section -->
-        <section id="main-content" class="page active">
+        <section id="welcomePage" class="page active">
             <div id="headerSection">
                 <p id="welcomeEl">Welcome to</p>
                 <h1 id="headerText">StarkLinkPay</h1>
                 <img src="./asset/logo.png" alt="logo" class="logoImg">
             </div>
             <div id="footerSection">
-                <button id="createWallet">Create New Wallet</button>
-                <button id="importWallet">Import Wallet</button>
+                <button type="submit" id="createWallet" class="btn-primary">Create New Wallet</button>
+                <button type="submit" id="importWallet" class="btn-secondary">Import Wallet</button>
             </div>
         </section>
 
         <!-- Creation of wallet -->
-        <section id="createWalletContainer" class="page">
+        <section id="createWalletContainer" class="page active">
             <div id="createWallet_firstChild"  class="textHeader">
                 <span>Back</span>
                 <h1>Create Wallet</h1>
@@ -48,7 +48,7 @@
             </div>
             <div id="createWallet_lastChild" class="contentLastChild">
                 <p>Keep These Phrases Safe</p>
-                <button>Continue</button>
+                <button class="btn-primary">Continue</button>
             </div>
         </section>
 
@@ -73,7 +73,7 @@
             </div>
             <div id="confirmWallet_lastChild" class="contentLastChild">
                 <p>Wallet Created Successfully</p>
-                <button>Go to Dashbooard</button>
+                <button class="btn-primary">Go to Dashbooard</button>
             </div>
         </section>
 
@@ -99,7 +99,7 @@
             </div>
             <div id="importWallet_lastChild" class="contentLastChild">
                 <p>Wallet Successfully Imported</p>
-                <button>Go to Dashbooard</button>
+                <button class="btn-primary">Go to Dashbooard</button>
             </div>
         </section>
 

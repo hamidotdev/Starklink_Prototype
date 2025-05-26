@@ -16,7 +16,8 @@ const createWalletBtn = document.getElementById('createWallet')
 
 createWalletBtn.addEventListener('click', function(){
     const pages = document.querySelectorAll('.page')
-    pages.forEach(page => page.classList.remove('active'))
+    pages.forEach(page => {
+        page.classList.remove('active')})
 
     const dashboard = document.getElementById("dashboardContainer")
     dashboard.classList.add('active')
