@@ -9,14 +9,18 @@ window.addEventListener("load", () => {
 
 const createWalletBtn = document.getElementById('createWallet')
 
-function showPage(pageId) {
+// function showPage(pageId) {
+
+//     document.getElementById(pageId).classList.add('active')
+// }
+
+createWalletBtn.addEventListener('click', function(){
     const pages = document.querySelectorAll('.page')
     pages.forEach(page => page.classList.remove('active'))
 
-    document.getElementById(pageId).classList.add('active')
-}
-
-createWalletBtn.addEventListener('click', showPage())
+    const dashboard = document.getElementById("dashboardContainer")
+    dashboard.classList.add('active')
+})
 
 
 
