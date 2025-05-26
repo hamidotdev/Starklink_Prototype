@@ -21,6 +21,7 @@ body {
 #container {
     width: 100%;
     max-width: 450px;
+    min-height: 100vh;
     height: 100%;
     background: #031A42;
     display: flex;
@@ -34,11 +35,11 @@ body {
 #main-content {
     width: 100%;
     height: 100%;
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 25%;
+    gap: 5rem;
 }
 
 .logoImg {
@@ -126,11 +127,12 @@ body {
     border: 2px solid #ffff;
 }
 
+
 /* Create Wallet Container */
 #createWalletContainer, #confirmWalletContainer, #importWalletContainer {
     width: 100%;
     padding: 2rem;
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
     align-items: center;
     height: 100%;
@@ -168,6 +170,7 @@ body {
     grid-auto-rows: 40px;
     color: #fff;
     font-weight: 400;
+    margin-block: 5rem;
 }
 
 .seedPhrases textarea {
@@ -177,7 +180,7 @@ body {
     align-items: center;
     padding: 10px 5px;
     outline: none;
-    background-color: #2e5497;
+    background-color: rgba(217, 217, 217, 0.16);
     resize: none;
     white-space: nowrap;
     color: #ffff;
@@ -200,6 +203,7 @@ body {
     text-align: center;
     font-size: 16px;
     font-weight: 400;
+    margin: 15px auto;
 }
 
 .contentLastChild p {
@@ -224,10 +228,10 @@ body {
     cursor: pointer;
 }
 
-/* Dashboard */
+/* DASHBOARD */
 #dashboardContainer {
     width: 100%;
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
     justify-content: center;
     gap: 20px;
@@ -459,3 +463,11 @@ body {
     font-size: 16px;
     font-weight: 400;
 }
+
+/* .page {
+    display: none;
+}
+
+.page.active {
+    display: flex;
+} */
