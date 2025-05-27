@@ -218,7 +218,7 @@
 
         <!-- Crypto Asset Dashboard -->
         <section id="assetContainer" class="page">
-            <h3 id="backDirection">Back</h3>
+            <h3 class="backDirection" id="backToDashboard">Back</h3>
             <div id="tokenContainer">
                 <div id="STRK_Token">
                     <div class="tokenId">
@@ -250,7 +250,41 @@
             </div>
             <h3 id="receiveContent">Recieve</h3>
             <div id="qrCodeContainer">
+                <div id="qrBlock"></div>
+            </div>
+            <p id="contractAddress"></p>
+            <div class="btnContainer">
+                <button class="btn-primary" id="copyAddyBtn">Copy Address</button>
+            </div>
+        </section>
 
+        <!-- Send Token Container -->
+        <section id="sendTokenContainer" class="page">
+            <h3 class="backDirection" id="backToAssetPage">Back</h3>
+            <div>
+                <div>
+                    <h3 class="sendTokenTitle">Select Currency</h3>
+                    <div>
+
+                    </div>
+                </div>
+                <div>
+                    <h3 class="sendTokenTitle">Enter Amount</h3>
+                    <div>
+                        <input type="number" class="sendToken-inputValue">
+                        <button class="sendToken-inputBtn">Max</button>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="sendTokenTitle">Enter Address</h3>
+                    <div>
+                        <input type="number" class="sendToken-inputValue">
+                        <button class="sendToken-inputBtn">Paste</button>
+                    </div>
+                </div>
+            </div>
+            <div class="btnContainer">
+                <button class="btn-primary">Send</button>
             </div>
         </section>
     </div>

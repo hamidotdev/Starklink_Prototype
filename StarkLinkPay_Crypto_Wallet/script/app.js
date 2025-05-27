@@ -7,35 +7,29 @@ window.addEventListener("load", () => {
     }, 2500)
 })
 
-// const createWalletBtn = document.getElementById('createWallet')
-
-// // function showPage(pageId) {
-
-// //     document.getElementById(pageId).classList.add('active')
-// // }
-
-// createWalletBtn.addEventListener('click', function(){
-//     const pages = document.querySelectorAll('.page')
-//     pages.forEach(page => {
-//         page.classList.remove('active')})
-
-//     const dashboard = document.getElementById("dashboardContainer")
-//     dashboard.classList.add('active')
-// })
+const createWalletBtn = document.getElementById('createWallet')
 
 
+function showPage() {
+    const pages = document.querySelectorAll('.page')
+    pages.forEach(page => {
+        page.classList.remove('active')
+    })
+    document.getElementById("sendTokenContainer").classList.add('active')
+}
+
+createWalletBtn.addEventListener('click', showPage)
 
 
-
-
-
-
-
-
-
-
-
-
+// class AppState {
+//     showPage(pageId) {
+//         const pages = document.querySelectorAll('.page')
+//         pages.forEach(page => {
+//             page.classList.remove('active')
+//         })
+//         document.getElementById(pageId).classList.add('active')
+//     }
+// }
 
 
 
