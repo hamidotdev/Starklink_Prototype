@@ -580,7 +580,7 @@ button:hover {
     transition: all 0.3s ease;
 }
 
-#sendToken-USDT_Token:hover {  
+#sendToken-USDT_Token:hover {
     background-color: rgba(217, 217, 217, 0.1);
     transform: translateX(5px);
 }
@@ -589,7 +589,47 @@ button:hover {
     background-color: rgba(108, 162, 226, 1);
 }
 
+.sendToken-inputContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(217, 217, 217, 0.04);
+    padding: 10px 15px;
+    margin-block: 10px;
+    border-radius: 20px;
+    color: #ffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+}
 
+.sendToken-inputValue {
+    width: 50%;
+    height: 36px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.sendToken-inputValue::-webkit-inner-spin-button,
+.sendToken-inputValue::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.sendToken-inputValue:focus {
+    
+}
+
+.sendToken-inputBtn {
+    width: 69px;
+    height: 36px;
+    border-radius: 20px;
+    border: none;
+    color: #fff;
+    text-transform: uppercase;
+    background-color: rgba(249, 116, 113, 0.49);
+}
 
 
 
