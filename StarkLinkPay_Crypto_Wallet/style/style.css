@@ -514,7 +514,7 @@ button:hover {
     font-weight: 400;
 }
 
-.value {
+.assetValue {
     font-size: 16px;
     font-weight: 400;
 }
@@ -549,7 +549,49 @@ button:hover {
     width: 100%;
     height: 100%;
     flex-direction: column;
+    padding-inline: 10px;
 }
+
+#sendToken-asset {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+#sendToken-asset > div {
+    width: 100%;
+}
+
+.sendTokenTitle {
+    width: 90%;
+    margin: 0 auto;
+}
+
+#sendToken-USDT_Token {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(217, 217, 217, 0.04);
+    padding: 10px 15px;
+    margin-block: 10px;
+    border-radius: 20px;
+    color: #ffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#sendToken-USDT_Token:hover {  
+    background-color: rgba(217, 217, 217, 0.1);
+    transform: translateX(5px);
+}
+
+#sendToken-USDT_Icon {
+    background-color: rgba(108, 162, 226, 1);
+}
+
+
+
+
 
 /* PAGE MANAGEMENT - FIXED */
 .page {
