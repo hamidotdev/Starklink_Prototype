@@ -277,19 +277,33 @@
                 <div>
                     <h3 class="sendTokenTitle">Enter Amount</h3>
                     <div class="sendToken-inputContainer">
-                        <input type="number" class="sendToken-inputValue">
+                        <input type="number" class="sendToken-inputValue" id="sendToken-inputAmount">
                         <button class="sendToken-inputBtn">Max</button>
                     </div>
                 </div>
                 <div>
                     <h3 class="sendTokenTitle">Enter Address</h3>
                     <div class="sendToken-inputContainer">
-                        <input type="number" class="sendToken-inputValue" id="sendToken-inputAddress">
+                        <input type="text" class="sendToken-inputValue" id="sendToken-inputAddress">
                         <button class="sendToken-inputBtn">Paste</button>
                     </div>
                 </div>
             </div>
             <div class="btnContainer">
+                <button class="btn-primary">Send</button>
+            </div>
+        </section>
+
+        <!-- Transaction Detailed Message -->
+        <section id="transactionSuccessfullyContainer" class="page">
+            <h3 class="backDirection" id="backToSendTokenPage">Back</h3>
+
+            <div id="transact-Message">
+                <img src="./asset/logo.png" alt="">
+                <h1 id="transact-headerMessageTitle">Transaction Successfully</h1>
+                <p id="transact-">You've successfully sent $345 to exampleress.fffgh</p>
+            </div>
+             <div class="btnContainer">
                 <button class="btn-primary">Send</button>
             </div>
         </section>

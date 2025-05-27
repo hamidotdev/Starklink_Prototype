@@ -550,12 +550,13 @@ button:hover {
     height: 100%;
     flex-direction: column;
     padding-inline: 10px;
+    gap: 5rem;
 }
 
 #sendToken-asset {
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 20px;
 }
 
 #sendToken-asset > div {
@@ -565,6 +566,9 @@ button:hover {
 .sendTokenTitle {
     width: 90%;
     margin: 0 auto;
+    color: #fff;
+    font-weight: 400;
+    font-size: 15px;
 }
 
 #sendToken-USDT_Token {
@@ -578,6 +582,7 @@ button:hover {
     color: #ffff;
     cursor: pointer;
     transition: all 0.3s ease;
+    height: 67px;
 }
 
 #sendToken-USDT_Token:hover {
@@ -601,6 +606,7 @@ button:hover {
     cursor: pointer;
     transition: all 0.3s ease;
     width: 100%;
+    height: 67px;
 }
 
 .sendToken-inputValue {
@@ -621,6 +627,14 @@ button:hover {
     
 }
 
+#sendToken-inputAmount {
+    color: #64E85E;
+}
+
+#sendToken-inputAddress {
+    color: #fff;
+}
+
 .sendToken-inputBtn {
     width: 69px;
     height: 36px;
@@ -629,6 +643,13 @@ button:hover {
     color: #fff;
     text-transform: uppercase;
     background-color: rgba(249, 116, 113, 0.49);
+}
+
+
+/* Transaction Detailed Message  */
+#transactionSuccessfullyContainer {
+    width: 100%;
+    flex-direction: column;
 }
 
 
