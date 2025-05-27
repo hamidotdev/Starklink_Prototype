@@ -50,7 +50,6 @@ body {
 #welcomePage {
     width: 100%;
     height: 100%;
-    /* display: flex; */
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -115,6 +114,8 @@ body {
     border-radius: 10px;
     color: #ffff;
     font-size: 16px;
+    cursor: pointer; /* Added cursor pointer */
+    transition: all 0.3s ease; /* Added smooth transition */
 }
 
 .btn-primary {
@@ -122,17 +123,27 @@ body {
     background: #F97471;
 }
 
+.btn-primary:hover {
+    background: #e85d5a; /* Darker shade on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(249, 116, 113, 0.3);
+}
+
 .btn-secondary {
     background: transparent;
     border: 2px solid #ffff;
 }
 
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
+}
 
 /* Create Wallet Container */
 #createWalletContainer, #confirmWalletContainer, #importWalletContainer {
     width: 100%;
     padding: 2rem;
-    /* display: flex; */
     flex-direction: column;
     align-items: center;
     height: 100%;
@@ -154,6 +165,11 @@ body {
     font-weight: 400;
     font-size: 16px;
     cursor: pointer;
+    transition: color 0.3s ease; /* Added transition */
+}
+
+.textHeader span:hover {
+    color: #e85d5a; /* Darker shade on hover */
 }
 
 .textHeader h1 {
@@ -184,6 +200,12 @@ body {
     resize: none;
     white-space: nowrap;
     color: #ffff;
+    border: none;
+    transition: background-color 0.3s ease; /* Added transition */
+}
+
+.seedPhrases textarea:focus {
+    background-color: rgba(217, 217, 217, 0.25);
 }
 
 .seedPhrases > textarea:nth-child(2), .seedPhrases > textarea:nth-child(6), .seedPhrases > textarea:nth-child(10), .seedPhrases > textarea:nth-child(14), .seedPhrases > textarea:nth-child(18), .seedPhrases > textarea:nth-child(22) {
@@ -217,15 +239,20 @@ body {
     font-size: 14px;
 }
 
+/* Generic button hover - this will work for all buttons */
+button {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
 button:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 /* DASHBOARD */
 #dashboardContainer {
     width: 100%;
-    /* display: flex; */
     flex-direction: column;
     justify-content: center;
     gap: 20px;
@@ -251,6 +278,11 @@ button:hover {
 
 #userIdAndsettings img {
     cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+#userIdAndsettings img:hover {
+    transform: scale(1.1);
 }
 
 #userId {
@@ -307,6 +339,15 @@ button:hover {
     margin-block: 15px;
 }
 
+#dashboardBtns > div {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+#dashboardBtns > div:hover {
+    transform: translateY(-3px);
+}
+
 #dashboardBtns .imgContainer {
     border-radius: 50%;
     background-color: rgba(58, 66, 208, 0.23);
@@ -315,6 +356,12 @@ button:hover {
     display: grid;
     place-items: center;
     cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#dashboardBtns .imgContainer:hover {
+    background-color: rgba(58, 66, 208, 0.4);
+    transform: scale(1.05);
 }
 
 #dashboardBtns h3 {
@@ -338,7 +385,7 @@ button:hover {
     color: #FFFFFF;
 }
 
-#transactionHistory {
+.transactionHistory {
     background-color: #D9D9D90A;
     display: flex;
     justify-content: space-between;
@@ -346,38 +393,45 @@ button:hover {
     padding: 15px;
     border-radius: 20px;
     margin: 15px 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-#transactionPayment {
+.transactionHistory:hover {
+    background-color: rgba(217, 217, 217, 0.15);
+    transform: translateX(5px);
+}
+
+.transactionPayment {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 15px;
 }
 
-#listBtns {
+.listBtns {
     border-radius: 50%;
     height: 8px;
     aspect-ratio: 1/1;
     background-color: #64E85E;
 }
 
-#transactionInfo {
+.transactionInfo {
     font-weight: 400;
     color: #fff;
 }
 
-#transactionInfo h3 {
+.transactionInfo h3 {
     font-size: 16px;
     font-weight: 400;
 }
 
-#paymentDuration {
+.paymentDuration {
     font-size: 12px;
     font-weight: 400;
 }
 
-#amount {
+.amount {
     color: #64E85E;
     font-size: 14px;
     font-weight: 400;
@@ -394,6 +448,12 @@ button:hover {
     color: #F97471;
     font-weight: 400;
     font-size: 16px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+#backDirection:hover {
+    color: #e85d5a;
 }
 
 #tokenContainer {
@@ -412,6 +472,13 @@ button:hover {
     margin-block: 10px;
     border-radius: 20px;
     color: #ffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#STRK_Token:hover, #USDT_Token:hover, #ETH_Token:hover {
+    background-color: rgba(217, 217, 217, 0.1);
+    transform: translateX(5px);
 }
 
 .tokenId {
@@ -458,6 +525,7 @@ button:hover {
     font-weight: 400;
 }
 
+/* PAGE MANAGEMENT - FIXED */
 .page {
     display: none;
     animation: slideIn 0.3s ease-out;
@@ -476,4 +544,29 @@ button:hover {
 
 .page.active {
     display: flex;
+}
+
+/* Make sure only one page is active at a time */
+#welcomePage.active ~ .page {
+    display: none !important;
+}
+
+#createWalletContainer.active ~ .page:not(#createWalletContainer) {
+    display: none !important;
+}
+
+#confirmWalletContainer.active ~ .page:not(#confirmWalletContainer) {
+    display: none !important;
+}
+
+#importWalletContainer.active ~ .page:not(#importWalletContainer) {
+    display: none !important;
+}
+
+#dashboardContainer.active ~ .page:not(#dashboardContainer) {
+    display: none !important;
+}
+
+#assetContainer.active ~ .page:not(#assetContainer) {
+    display: none !important;
 }
