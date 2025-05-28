@@ -650,9 +650,36 @@ button:hover {
 #transactionSuccessfullyContainer {
     width: 100%;
     flex-direction: column;
+    gap: 5rem;
 }
 
+#transact-Message {
+    width: 80%;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
 
+#transact-headerMessageTitle {
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+#transact-detailedMessage {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24.5px;
+}
+
+/* Freelance Updated Details */
+#freelancerDetailsContainer {
+    
+}
 
 /* PAGE MANAGEMENT - FIXED */
 .page {
