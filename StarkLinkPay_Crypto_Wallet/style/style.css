@@ -678,7 +678,22 @@ button:hover {
 
 /* Freelance Updated Details */
 #freelancerDetailsContainer {
-    
+  flex-direction: column;
+  width: 100%;
+  gap: 3rem;
+}
+
+#freelanceHeaderContainer {
+    width: 100%;
+    background-color: rgba(217, 217, 217, 0.13);
+    padding: 15px;
+
+}
+
+#freelanceToHomePage {
+    color: #e85d5a;
+    font-weight: 400;
+    font-size: 16px;
 }
 
 /* PAGE MANAGEMENT - FIXED */

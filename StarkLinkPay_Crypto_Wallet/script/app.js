@@ -15,7 +15,7 @@ function showPage() {
     pages.forEach(page => {
         page.classList.remove('active')
     })
-    document.getElementById("transactionSuccessfullyContainer").classList.add('active')
+    document.getElementById("freelancerDetailsContainer").classList.add('active')
 }
 
 createWalletBtn.addEventListener('click', showPage)
