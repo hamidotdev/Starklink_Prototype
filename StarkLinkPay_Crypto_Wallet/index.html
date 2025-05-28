@@ -105,113 +105,126 @@
 
         <!-- Dashboard -->
         <section id="dashboardContainer" class="page">
-            <h3 id="welcomeMessage">Welcome</h3>
+            <div id="dashboardWithNoModal">
+                <h3 id="welcomeMessage">Welcome</h3>
 
-            <div id="userIdAndsettings">
-                <div id="userId">
-                    <div id="userNameIcon">P</div>
-                    <div id="userName">
-                        <h3>Precious</h3>
-                        <h3><span>UID:</span> 93746</h3>
+                <div id="userIdAndsettings">
+                    <div id="userId">
+                        <div id="userNameIcon">P</div>
+                        <div id="userName">
+                            <h3>Precious</h3>
+                            <h3><span>UID:</span> 93746</h3>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="./asset/Settings.png" alt="settings_icon">
                     </div>
                 </div>
-                <div>
-                    <img src="./asset/Settings.png" alt="settings_icon">
+
+                <div id="dashboardTitle">
+                    <h2>Dashboard</h2>
+                    <h1>$1,250</h1>
+                </div>
+
+                <div id="dashboardBtns">
+                    <div>
+                        <div class="imgContainer" >
+                            <img src="./asset/Arrow up.png" alt="">
+                        </div>
+                        <h3>Send</h3>
+                    </div>
+                    <div>
+                        <div class="imgContainer" id="getJobsBtn">
+                            <img src="./asset/Shopping bag.png" alt="">
+                        </div>
+                        <h3>Jobs</h3>
+                    </div>
+                    <div>
+                        <div class="imgContainer">
+                            <img src="./asset/Link.png" alt=""></div>
+                        <h3>Generate Link</h3>
+                    </div>
+                    <div>
+                        <div class="imgContainer">
+                            <img src="./asset/Arrow down.png" alt="">
+                        </div>
+                        <h3>Receive</h3>
+                    </div>
+                </div>
+
+                <div id="transactionActivities">
+                    <h2>Recent Activity</h2>
+                    <div class="transactionHistory">
+                        <div class="transactionPayment">
+                            <div class="listBtns"></div>
+                            <div class="transactionInfo">
+                                <h3 class="paymentFormat">Payment Received</h3>
+                                <span class="paymentDuration">2 hours ago</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="amount">+300</h3>
+                        </div>
+                    </div>
+                    <div class="transactionHistory">
+                        <div class="transactionPayment">
+                            <div class="listBtns"></div>
+                            <div class="transactionInfo">
+                                <h3 class="paymentFormat">Payment Received</h3>
+                                <span class="paymentDuration">2 hours ago</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="amount">+300</h3>
+                        </div>
+                    </div>
+                    <div class="transactionHistory">
+                        <div class="transactionPayment">
+                            <div class="listBtns"></div>
+                            <div class="transactionInfo">
+                                <h3 class="paymentFormat">Payment Received</h3>
+                                <span class="paymentDuration">2 hours ago</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="amount">+300</h3>
+                        </div>
+                    </div>
+                    <div class="transactionHistory">
+                        <div class="transactionPayment">
+                            <div class="listBtns"></div>
+                            <div class="transactionInfo">
+                                <h3 class="paymentFormat">Payment Received</h3>
+                                <span class="paymentDuration">2 hours ago</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="amount">+300</h3>
+                        </div>
+                    </div>
+                    <div class="transactionHistory">
+                        <div class="transactionPayment">
+                            <div class="listBtns"></div>
+                            <div class="transactionInfo">
+                                <h3 class="paymentFormat">Payment Received</h3>
+                                <span class="paymentDuration">2 hours ago</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="amount">+300</h3>
+                        </div>
+                    </div>
                 </div>
             </div>
-
-            <div id="dashboardTitle">
-                <h2>Dashboard</h2>
-                <h1>$1,250</h1>
-            </div>
-
-            <div id="dashboardBtns">
-                <div>
-                    <div class="imgContainer">
-                        <img src="./asset/Arrow up.png" alt="">
-                    </div>
-                    <h3>Send</h3>
+            <!-- Dashboard Jobs Modal -->
+            <div id="dashboardJobsModal">
+                <div id="dashboardJobsModalHeaderContainer">
+                    <p>Close</p>
+                    <h2>Select Profile</h2>
                 </div>
-                <div>
-                    <div class="imgContainer">
-                        <img src="./asset/Shopping bag.png" alt="">
-                    </div>
-                    <h3>Jobs</h3>
-                </div>
-                <div>
-                    <div class="imgContainer">
-                        <img src="./asset/Link.png" alt=""></div>
-                    <h3>Generate Link</h3>
-                </div>
-                <div>
-                    <div class="imgContainer">
-                        <img src="./asset/Arrow down.png" alt="">
-                    </div>
-                    <h3>Receive</h3>
-                </div>
-            </div>
-
-            <div id="transactionActivities">
-                <h2>Recent Activity</h2>
-                <div class="transactionHistory">
-                    <div class="transactionPayment">
-                        <div class="listBtns"></div>
-                        <div class="transactionInfo">
-                            <h3 class="paymentFormat">Payment Received</h3>
-                            <span class="paymentDuration">2 hours ago</span>
-                        </div>
-                    </div>
-                    <div>
-                        <h3 class="amount">+300</h3>
-                    </div>
-                </div>
-                <div class="transactionHistory">
-                    <div class="transactionPayment">
-                        <div class="listBtns"></div>
-                        <div class="transactionInfo">
-                            <h3 class="paymentFormat">Payment Received</h3>
-                            <span class="paymentDuration">2 hours ago</span>
-                        </div>
-                    </div>
-                    <div>
-                        <h3 class="amount">+300</h3>
-                    </div>
-                </div>
-                <div class="transactionHistory">
-                    <div class="transactionPayment">
-                        <div class="listBtns"></div>
-                        <div class="transactionInfo">
-                            <h3 class="paymentFormat">Payment Received</h3>
-                            <span class="paymentDuration">2 hours ago</span>
-                        </div>
-                    </div>
-                    <div>
-                        <h3 class="amount">+300</h3>
-                    </div>
-                </div>
-                <div class="transactionHistory">
-                    <div class="transactionPayment">
-                        <div class="listBtns"></div>
-                        <div class="transactionInfo">
-                            <h3 class="paymentFormat">Payment Received</h3>
-                            <span class="paymentDuration">2 hours ago</span>
-                        </div>
-                    </div>
-                    <div>
-                        <h3 class="amount">+300</h3>
-                    </div>
-                </div>
-                <div class="transactionHistory">
-                    <div class="transactionPayment">
-                        <div class="listBtns"></div>
-                        <div class="transactionInfo">
-                            <h3 class="paymentFormat">Payment Received</h3>
-                            <span class="paymentDuration">2 hours ago</span>
-                        </div>
-                    </div>
-                    <div>
-                        <h3 class="amount">+300</h3>
-                    </div>
+                <div id="dashboardJobs-btns">
+                    <button class="btn-primary" id="hireBtn">I Want To Hire</button>
+                    <button class="btn-secondary" id="workBtn">I Want To Work</button>
                 </div>
             </div>
         </section>

@@ -8,6 +8,7 @@ window.addEventListener("load", () => {
 })
 
 const createWalletBtn = document.getElementById('createWallet')
+const getJobsBtn = document.getElementById('getJobsBtn')
 
 
 function showPage() {
@@ -15,11 +16,24 @@ function showPage() {
     pages.forEach(page => {
         page.classList.remove('active')
     })
-    document.getElementById("freelancerDetailsContainer").classList.add('active')
+    document.getElementById("dashboardContainer").classList.add('active')
+}
+
+function showJobsModal() {
+    const jobsModalContainer = document.getElementById('dashboardJobsModal')
+    const dashboardContainer = document.getElementById('dashboardWithNoModal')
+
+
+    jobsModalContainer.style.display = 'flex'
+    dashboardContainer.style.opacity = '0.3'
+    jobsModalContainer.style.backgroundColor = '#031A42'
+    dashboardContainer.style.pointerEvents = 'none'
+    dashboardContainer.style.backgroundColor = 'rgba(38, 35, 45, 0.8)'
+    dashboardContainer.style.overflowY = 'hidden'
 }
 
 createWalletBtn.addEventListener('click', showPage)
-
+getJobsBtn.addEventListener('click', showJobsModal)
 
 // class AppState {
 //     showPage(pageId) {
